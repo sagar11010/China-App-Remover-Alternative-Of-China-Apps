@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Alternative of China apps</string>
+    <string name="rescan">Re-scan Now</string>
+    <string name="scannow">Scan now</string>
+    <string name="sharethisapp">Share This App</string>
+    <string name="congratulation">Congratulation</string>
+    <string name="app_found_count">&lt;b>%1$d China Apps&lt;/b> Found</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="contact_us">Contact us</string>
+    <string name="uninstall_china_apps">Uninstall China Apps</string>
+    <string name="title_main">Alternatives Of China Apps</string>
+    <string name="china_apps_remover">China Apps Remover</string>
+    <string name="app_id">ca-app-pub-1336326990354816~9898899228</string>
+    <string name="banner_id">ca-app-pub-1336326990354816/5959654213</string>
+    <string name="intrestial_id">ca-app-pub-1336326990354816/8375786768</string>
+</resources>
