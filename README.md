@@ -1,4 +1,4 @@
-# China-App-Remover-ALternative-Of-China-Apps
+# China-App-Remover-Alternative-Of-China-Apps
 
 My First Open Source COntribution
 
