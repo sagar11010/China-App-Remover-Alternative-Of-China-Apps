@@ -1,6 +1,6 @@
 # China-App-Remover-Alternative-Of-China-Apps
 
-My First Open Source COntribution
+My First Open Source Contribution
 
 ## Features
 
