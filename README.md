@@ -2,6 +2,8 @@
 
 My First Open Source Contribution
 
+<a href="https://raw.githubusercontent.com/sagar11010/China-App-Remover-ALternative-Of-China-Apps/master/apk/Remove%20CHina%20Apps.apk" title="Download APk">Download Apk</a>
+
 ## Features
 
 * [x] Android 
