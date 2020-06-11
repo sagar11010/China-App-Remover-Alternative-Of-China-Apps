@@ -16,7 +16,7 @@ My First Open Source COntribution
 
 ### Screenshots
 
-<img src="1.png" height="300em" /> <img src="2.png" height="300em" /> <img src="3.png" height="300em" /> <img src="4.png" height="300em" /> <img src="5.png" height="300em" />
+<img src="screenshot/1.png" height="300em" /> <img src="2.png" height="300em" /> <img src="3.png" height="300em" /> <img src="4.png" height="300em" /> <img src="5.png" height="300em" />
 
 
 # Pull Requests
