@@ -50,6 +50,12 @@ public class AlternativeAppsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alternative_apps);
         getSupportActionBar().setTitle("Alternative Apps");
+        initData();l̥
+    }
+    
+    
+    
+    void initData(){
         adViewContainer = findViewById(R.id.ad_view_container);
         loadAds();
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
@@ -60,6 +66,7 @@ public class AlternativeAppsActivity extends AppCompatActivity {
         recyclerView.setAdapter(alterNativeAdapter);
         pb.setVisibility(View.VISIBLE);
         getListItems();
+    
     }
 
     AdView adView;
@@ -130,6 +137,8 @@ public class AlternativeAppsActivity extends AppCompatActivity {
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
     }
 
+    
+    //this function is use for load admob ads
     private void loadAds() {
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
@@ -145,6 +154,8 @@ public class AlternativeAppsActivity extends AppCompatActivity {
     }
 
 
+
+    //this function receive all china app list and alternative of that app lists.
     private void getListItems() {
         FirebaseFirestore rootRef = FirebaseFirestore.getInstance();
         rootRef.collection("appList").document("alternativeAppsList").collection("allAlternativeApps").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -158,7 +169,6 @@ public class AlternativeAppsActivity extends AppCompatActivity {
                     m.setTitle(true);
                     m.setName(document.getData().get("chinaAppName").toString());
                     alternativeList.add(m);
-                    /*  List<String> group =*/
                     List<Map<String, String>> l = (List<Map<String, String>>) document.getData().get("alternativeApps");
                     for (int i = 0; i < l.size(); i++) {
                         ModelAlternative model = new ModelAlternative();
