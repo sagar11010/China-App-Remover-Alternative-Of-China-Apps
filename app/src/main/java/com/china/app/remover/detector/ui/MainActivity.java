@@ -71,20 +71,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onPause() {
+        pauseAdview();
+        super.onPause();
+    }
+    
+    void pauseAdview(){
         if (adView != null) {
             adView.pause();
         }
-        super.onPause();
     }
 
     @Override
     public void onDestroy() {
-        if (adView != null) {
-            adView.destroy();
-        }
+       destroyAdview();
         super.onDestroy();
     }
 
+    void destroyAdview(){
+          if (adView != null) {
+            adView.destroy();
+        }
+    }
     private void loadAds() {
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
@@ -136,6 +143,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    
     private void setData() {
         itemlistAdapter = new ItemlistAdapter(this, appInfos, this);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
