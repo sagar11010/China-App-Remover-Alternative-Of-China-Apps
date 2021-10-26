@@ -49,26 +49,35 @@ public class AlternativeAppsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alternative_apps);
-        getSupportActionBar().setTitle("Alternative Apps");
+        setTitle();
         initData();l̥
     }
     
+    void setTitle(){
+        getSupportActionBar().setTitle("Alternative Apps");
     
+    }
     
     void initData(){
         adViewContainer = findViewById(R.id.ad_view_container);
         loadAds();
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
         pb = findViewById(R.id.progressBar);
-        alterNativeAdapter = new AlterNativeAdapter(this, alternativeList);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(alterNativeAdapter);
+        loadRecyclerViewData();
         pb.setVisibility(View.VISIBLE);
         getListItems();
     
     }
 
+     void loadRecyclerViewData(){
+           RecyclerView recyclerView = findViewById(R.id.recycler_view);
+     
+        alterNativeAdapter = new AlterNativeAdapter(this, alternativeList);
+     
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(alterNativeAdapter);
+     
+     }
     AdView adView;
 
     private void loadBanner() {
