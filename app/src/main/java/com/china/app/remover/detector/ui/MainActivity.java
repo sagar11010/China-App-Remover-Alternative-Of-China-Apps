@@ -65,7 +65,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setClickListner();
         loadAds();
 
-        setData();
+        itemlistAdapter = new ItemlistAdapter(this, appInfos, this);
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        binding.recyclerView.setItemAnimator(new DefaultItemAnimator());
+        binding.recyclerView.setAdapter(itemlistAdapter);
+        getListItems();
     }
 
 
@@ -141,15 +145,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
-    }
-
-    
-    private void setData() {
-        itemlistAdapter = new ItemlistAdapter(this, appInfos, this);
-        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        binding.recyclerView.setItemAnimator(new DefaultItemAnimator());
-        binding.recyclerView.setAdapter(itemlistAdapter);
-        getListItems();
     }
 
     private void setClickListner() {
