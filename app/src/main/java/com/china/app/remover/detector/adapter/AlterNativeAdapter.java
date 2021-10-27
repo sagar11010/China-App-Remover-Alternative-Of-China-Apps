@@ -64,9 +64,7 @@ public class AlterNativeAdapter extends RecyclerView.Adapter<AlterNativeAdapter.
         return this.appInfos.get(i);
     }
 
-    public int getItemCount() {
-        return this.appInfos.size();
-    }
+   
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView appsName;
@@ -74,12 +72,6 @@ public class AlterNativeAdapter extends RecyclerView.Adapter<AlterNativeAdapter.
         final TextView tvChinaAppTitle;
         final CardView cardOurApp;
 
-        ViewHolder(View view) {
-            super(view);
-            this.appsName = (TextView) view.findViewById(R.id.appsName);
-            this.send = (ImageView) view.findViewById(R.id.send);
-            this.tvChinaAppTitle = (TextView) view.findViewById(R.id.tvChinaAppTitle);
-            this.cardOurApp = (CardView) view.findViewById(R.id.cardOurApp);
-        }
+      
     }
 }
